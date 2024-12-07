@@ -2,7 +2,6 @@
 # Mert Uludoğan 2380996
 # Yiğitcan Özcan 2521847
 
-#ISSUE: When N gets bigger the compressed image's size surpasses the original image. WTF?
 
 import numpy as np
 import cv2

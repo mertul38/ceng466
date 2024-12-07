@@ -38,8 +38,8 @@ write_image(blue_channel, "b1_blue_channel.png")
 write_image(green_channel, "b1_green_channel.png")
 write_image(red_channel, "b1_red_channel.png")
 
-b1_gaus_blurred = cv2.GaussianBlur(img1, (11, 11), 0)
-b1_med_blurred = cv2.medianBlur(img1, 7)
+b1_gaus_blurred = cv2.GaussianBlur(img1, (21, 21), 0)
+b1_med_blurred = cv2.medianBlur(img1, 13)
 write_image(b1_med_blurred, "b1_median.png")
 write_image(b1_gaus_blurred, "b1_gaussian.png")
 
@@ -50,7 +50,7 @@ write_image(green_channel, "b2_green_channel.png")
 write_image(red_channel, "b2_red_channel.png")
 
 b2_gaus_blurred = cv2.GaussianBlur(img2, (11, 11), 0)
-b2_med_blurred = cv2.medianBlur(img2, 7)
+b2_med_blurred = cv2.medianBlur(img2, 9)
 write_image(b2_med_blurred, "b2_median.png")
 write_image(b2_gaus_blurred, "b2_gaussian.png")
 
@@ -60,12 +60,13 @@ write_image(blue_channel, "b3_blue_channel.png")
 write_image(green_channel, "b3_green_channel.png")
 write_image(red_channel, "b3_red_channel.png")
 
-b3_gaus_blurred = cv2.GaussianBlur(img3, (11, 11), 0)
-b3_med_blurred = cv2.medianBlur(img3, 7)
+b3_gaus_blurred = cv2.GaussianBlur(img3, (17, 17), 0)
+b3_med_blurred = cv2.medianBlur(img3, 9)
 write_image(b3_med_blurred, "b3_median.png")
 write_image(b3_gaus_blurred, "b3_gaussian.png")
 
 # It might be necessary to apply different filters to different channels, since channels do not have the same type of noise.
+
 
 def apply_fourier_filters(img, output_prefix):
     # Split the image into channels
@@ -134,3 +135,5 @@ def apply_fourier_filters(img, output_prefix):
 apply_fourier_filters(img1, "b1")
 apply_fourier_filters(img2, "b2")
 apply_fourier_filters(img3, "b3")
+
+
