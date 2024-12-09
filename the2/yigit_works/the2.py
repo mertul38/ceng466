@@ -84,7 +84,7 @@ for k in [3, 5, 7]:
 #step 5
 def binarize_msb(img, prefix):
     msb_img = ((img >> 7) & 1) * 255  # Extract MSB and scale to 0-255
-    write_image(msb_img, f"{prefix}_msb.jpg")
+    write_image(msb_img, f"{prefix}_msb.png")
     return msb_img
 
 msb_img1 = binarize_msb(img1, "a1")
